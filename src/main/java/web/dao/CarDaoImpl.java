@@ -12,11 +12,31 @@ public class CarDaoImpl implements CarDao {
     @Override
     public List<Car> getAllCars() {
         return List.of(
-                new Car("Corolla", "E150", "Silver"),
-                new Car("Audi", "A8", "Black"),
-                new Car("Subaru", "Impreza", "Blue"),
-                new Car("Toyota", "Camry", "Black"),
-                new Car("Toyota", "Prado", "Black")
+                Car.builder()
+                        .model("Corolla")
+                        .series("E150")
+                        .color("Silver")
+                        .build(),
+                Car.builder()
+                        .model("Audi")
+                        .series("A8")
+                        .color("Black")
+                        .build(),
+                Car.builder()
+                        .model("Subaru")
+                        .series("Impreza")
+                        .color("Blue")
+                        .build(),
+                Car.builder()
+                        .model("Toyota")
+                        .series("Camry")
+                        .color("Black")
+                        .build(),
+                Car.builder()
+                        .model("Toyota")
+                        .series("Prado")
+                        .color("Black")
+                        .build()
         );
     }
 
